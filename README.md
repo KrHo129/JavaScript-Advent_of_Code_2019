@@ -1,2 +1,6 @@
-# JavaScript-Advent_of_Code_2019
-Advent of code 2019 - JS
+# Advent od Code (AoC) 2019
+https://adventofcode.com/2019
+
+
+
+programing language: JavaScript
