@@ -1,0 +1,12 @@
+.squere-small {
+    width: 10px;
+    height: 10px;
+    margin-top: -10px;
+    border: 1px solid black;
+}
+.black {
+    background-color: darkslategray;
+}
+.lightgray {
+    background-color: lightgray;
+}
