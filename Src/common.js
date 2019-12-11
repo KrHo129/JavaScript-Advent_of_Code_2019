@@ -30,8 +30,9 @@ function output(dayIdentifier, timeStart = new Date(), result1 = "null", result2
     resultsElement.appendChild(headerElement);
 
     const dayResultElement = document.createElement("div");
+    dayResultElement.classList.add(dayIdentifier.replace(" ", "-"));
     dayResultElement.innerHTML = ("<b>Part 1: </b>" + result1 +
         "<br><b>Part 2: </b>" + result2 +
-        "<br>Finished in: " + timeNedded / 1000 + "s");
+        "<br><br>Finished in: " + timeNedded / 1000 + "s");
     resultsElement.appendChild(dayResultElement);
 }
