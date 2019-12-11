@@ -2,7 +2,7 @@
 https://adventofcode.com/2019
 
 ## Progress
-| Day    | Python |
+| Day    |        |
 |:------:|:------:|
 | Day 1  |    ✔   |
 | Day 2  |    ✔   |
