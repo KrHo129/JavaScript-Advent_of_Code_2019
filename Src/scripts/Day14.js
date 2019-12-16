@@ -80,11 +80,6 @@
             if (totalOre > maxOre) {
                 return i;
             }
-            // if (i % 1000 === 0) {
-            //     console.log(i / 1000);
-            //     console.log("fuel", totalOre, "missing fuel", maxOre - totalOre, totalOre / maxOre);
-
-            // }
         }
     }
     const startTime = new Date();
@@ -96,6 +91,6 @@
         + "Javascript devision not precise enough (not enough decimal places)<br>"
         + "Brute force method is writen in Day14.js file, but it takes time.");
 
-    // Precise method, but takes a long time ....
+    // Precise method, but takes a long time (45 min on intel i3-2330M) ....
     // output("Day 12", startTime, part1(1), part2_BruteForce(1, 1000000000000));
 })();
