@@ -21,7 +21,7 @@ function getReverseArray(array) {
 
 
 // output results
-function output(dayIdentifier, timeStart = new Date(), result1 = "null", result2 = "null") {
+function output(dayIdentifier, timeStart = new Date(), result1 = "null", result2 = "null", comment = "") {
     const resultsElement = document.querySelector(".js-results");
 
     const timeNedded = new Date() - timeStart;
@@ -33,6 +33,7 @@ function output(dayIdentifier, timeStart = new Date(), result1 = "null", result2
     dayResultElement.classList.add(dayIdentifier.replace(" ", "-"));
     dayResultElement.innerHTML = ("<b>Part 1: </b>" + result1 +
         "<br><b>Part 2: </b>" + result2 +
+        "<br>" + comment +
         "<br><br>Finished in: " + timeNedded / 1000 + "s");
     resultsElement.appendChild(dayResultElement);
 }
