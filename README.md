@@ -29,5 +29,3 @@ https://adventofcode.com/2019
 | Day 23 |    ✗   |    ✗   |
 | Day 24 |    ✗   |    ✗   |
 | Day 25 |    ✗   |    ✗   |
-
-programing language: JavaScript
