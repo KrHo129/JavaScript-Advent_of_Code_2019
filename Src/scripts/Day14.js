@@ -70,7 +70,7 @@
         return Math.floor(maxOre / oreForOneFuel);
     }
 
-    function part2_2(quantityOfFuel, maxOre) {
+    function part2_BruteForce(quantityOfFuel, maxOre) {
         inputData = parseData();
         let totalOre = 0;
         for (let i = 0; true; i++) {
@@ -91,9 +91,12 @@
 
     // not totaly precise method (devision is not precise enough), but fast
     // for my case I need to substract one form the result
-    output("Day 12", startTime, part1(1), part2(1, 1000000000000) - 1, "nenatančno deljenje v js ... premalo decimalk");
+    output("Day 12", startTime, part1(1), part2(1, 1000000000000) - 1,
+        "<br>Error of +/- 2 possible on Prat 2.<br>"
+        + "Javascript devision not precise enough (not enough decimal places)<br>"
+        + "Brute force method is writen in Day14.js file, but it takes time.");
 
     // Precise method, but takes a long time ....
-    // output("Day 12", startTime, part1(1), part2_2(1, 1000000000000));
+    // output("Day 12", startTime, part1(1), part2_BruteForce(1, 1000000000000));
 
 })();
