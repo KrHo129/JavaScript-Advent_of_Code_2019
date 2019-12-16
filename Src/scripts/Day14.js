@@ -98,5 +98,4 @@
 
     // Precise method, but takes a long time ....
     // output("Day 12", startTime, part1(1), part2_BruteForce(1, 1000000000000));
-
 })();
