@@ -1,3 +1,16 @@
+html {
+    min-height: 100%;
+    background-color: #0f0f23;
+    color: #c6c6c7;
+    padding: 0 20px;
+}
+h1 {
+    color: #056a0c;
+}
+h2 {
+    color: #00c102;
+}
+
 .squere-small {
     width: 10px;
     height: 10px;
