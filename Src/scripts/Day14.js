@@ -67,69 +67,33 @@
         inputData = parseData();
         const oreForOneFuel = getNeededMaterials2("FUEL", quantityOfFuel);
 
-        return Math.floor(maxOre / oreForOneFuel) - 1;
+        return Math.floor(maxOre / oreForOneFuel);
     }
 
-    const startTime = new Date();
-    output("Day 12", startTime, part1(1), part2(1, 1000000000000), "nenatančno deljenje v js ... premalo decimalk");
-
-
-    const oreLog = {};
-    function getNeededMaterials3(targetMaterial, quantity) {
-        const numOfReactions = Math.ceil((quantity - leftovers[targetMaterial]) / inputData[targetMaterial].producedQuantity);
-        leftovers[targetMaterial] = numOfReactions * inputData[targetMaterial].producedQuantity + leftovers[targetMaterial] - quantity;
-
-        const neededMaterials = Object.keys(inputData[targetMaterial].inputMaterials);
-
-        let ore = 0;
-
-        for (material of neededMaterials) {
-            if (material === "ORE") {
-                if (typeof (oreLog[targetMaterial]) === "undefined") {
-                    oreLog[targetMaterial] = {
-                        oreSequence: "",
-                        pattern: "",
-                        foundAtIndex: -1,
-                    }
-                }
-                const oreVal = inputData[targetMaterial].inputMaterials[material] * numOfReactions;
-                ore += oreVal;
-
-                oreLog[targetMaterial].oreSequence += oreVal.toString() + ",";
-            } else {
-                ore += getNeededMaterials3(material, inputData[targetMaterial].inputMaterials[material] * numOfReactions);
-            }
-        }
-        return ore;
-    }
-
-
-    function test() {
+    function part2_2(quantityOfFuel, maxOre) {
         inputData = parseData();
         let totalOre = 0;
         for (let i = 0; true; i++) {
-            const currentOre = getNeededMaterials("FUEL", 1);
+            const currentOre = getNeededMaterials("FUEL", quantityOfFuel);
             totalOre += currentOre;
 
-            if (totalOre > 1000000000000) {
-                return totalOre - currentOre;
+            if (totalOre > maxOre) {
+                return i;
             }
-            if (i%1000 === 0) {
-                console.log(i/1000);
-                console.log("fuel", totalOre, "missing fuel", 1000000000000 - totalOre, totalOre / 1000000000000);
-                
-            }
-            if (i > 5000000) {
-                console.log("ininite break");
-                break;
-            }
-        }
-        for (ore of Object.keys(oreLog)) {
-            console.log(oreLog[ore].oreSequence);
-            
+            // if (i % 1000 === 0) {
+            //     console.log(i / 1000);
+            //     console.log("fuel", totalOre, "missing fuel", maxOre - totalOre, totalOre / maxOre);
+
+            // }
         }
     }
+    const startTime = new Date();
 
-    test();
+    // not totaly precise method (devision is not precise enough), but fast
+    // for my case I need to substract one form the result
+    output("Day 12", startTime, part1(1), part2(1, 1000000000000) - 1, "nenatančno deljenje v js ... premalo decimalk");
+
+    // Precise method, but takes a long time ....
+    // output("Day 12", startTime, part1(1), part2_2(1, 1000000000000));
 
 })();
