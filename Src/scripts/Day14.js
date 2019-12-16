@@ -82,15 +82,15 @@
             }
         }
     }
+    
     const startTime = new Date();
-
     // not totaly precise method (devision is not precise enough), but fast
     // for my case I need to substract one form the result
-    output("Day 12", startTime, part1(1), part2(1, 1000000000000) - 1,
+    output("Day 14", startTime, part1(1), part2(1, 1000000000000) - 1,
         "<br>Error of +/- 2 possible on Prat 2.<br>"
         + "Javascript devision not precise enough (not enough decimal places)<br>"
         + "Brute force method is writen in Day14.js file, but it takes time.");
 
     // Precise method, but takes a long time (45 min on intel i3-2330M) ....
-    // output("Day 12", startTime, part1(1), part2_BruteForce(1, 1000000000000));
+    // output("Day 14", startTime, part1(1), part2_BruteForce(1, 1000000000000));
 })();
