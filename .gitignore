@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+/Src_Cpp/.vs/Src_Cpp/v15
+/Src_Cpp/Src_Cpp/Debug/Src_Cpp.tlog
+/Src_Cpp/Src_Cpp/Debug
+/Src_Cpp/Debug
+/.vs
